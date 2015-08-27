@@ -1,0 +1,56 @@
+    @mixin row($padding) {
+        .#{$grid-prefix}row {
+            margin-left: -$padding;
+            margin-right: -$padding;
+
+            & > [class*="col-"] {
+                padding-left: $padding;
+                padding-right: $padding;
+            }
+        }
+    }
+
+    &.full {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+
+    &.fixed {
+        @include row($fixed-standard);
+    }
+
+    &.fixed-small {
+        @include row($fixed-small-margin);
+    }
+
+    &.fixed-large {
+        @include row($fixed-large-margin);
+    }
+
+    @media screen and (min-width: $vp2) {
+        &.fixed-small {
+            @include row($fixed-small-margin*3);
+        }
+
+        &.fixed-large {
+            @include row($fixed-large-margin*3);
+        }
+    }
+
+    @media screen and (min-width: $vp3) {
+        &.fixed-small {
+            @include row(($fixed-small-margin*3)*2);
+        }
+
+        &.fixed-large {
+            @include row(($fixed-large-margin*3)*2);
+        }
+    }
+
+        //Zero margin for the grid level
+        &.zero-margin {
+            @include row(0);
+        }

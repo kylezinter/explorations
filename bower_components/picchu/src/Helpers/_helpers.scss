@@ -1,0 +1,156 @@
+//------------------------------------
+//              #HELPERS
+//------------------------------------
+
+//Clear fix placeholder(Nicholas Gallagher)
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+    @extend %clearfix;
+}
+
+//Visual hides element but allows it to still be read by screen readers
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.visually-hidden {
+    @extend %visuallyhidden;
+}
+
+.text-center, .tac {
+    text-align: center;
+}
+
+.text-left, .tal {
+    text-align: left;
+}
+
+.text-right, .tar {
+    text-align: right;
+}
+
+.vertical-align-top, .vat {
+    vertical-align: top;
+}
+
+.vertical-align-middle, .vam {
+    vertical-align: middle;
+}
+
+.vertical-align-bottom, .vab {
+    vertical-align: bottom;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-margin-horizontal {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.no-margin-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-horizontal {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.no-padding-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.overflow-hidden, .ofh {
+    overflow: hidden;
+}
+
+.float-right, .fr {
+    float: right;
+}
+
+.float-left, .fl {
+    float: left;
+}
+
+.float-none, .fn {
+    float: none;
+}
+
+.no-max-width {
+    max-width: none !important;
+}
+
+.full-width {
+    width: 100%;
+}

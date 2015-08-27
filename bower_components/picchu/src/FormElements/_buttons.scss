@@ -1,0 +1,73 @@
+button, .button {
+	border: none;
+	box-sizing: border-box;
+	outline: none;
+	padding: 0.5em 1.5em;
+	position: relative;
+	transition: all 0.15s;
+
+	&[disabled] {
+		background-color: tint($gray, 60%);
+		color: tint($gray, 20%);
+	}
+
+	&.secondary {
+		background-color: $gray;
+		color: $white;
+
+		&:hover, &:focus {
+			background-color: shade($gray, 20%);
+		}
+		&:active {
+			background-color: shade($gray, 40%);
+		}
+	}
+
+	@each $pair in $color-list {
+		&.#{nth($pair, 1)}-bgc {
+			&:hover, &:focus {
+				background-color: shade(nth($pair, 2), 20%);
+			}
+			&:active {
+				background-color: shade(nth($pair, 2), 40%);
+			}
+
+			&[disabled] {
+				&:hover, &:focus {
+					background-color: tint($gray, 60%);
+					color: tint($gray, 20%);
+				}
+			}
+		}
+	}
+
+	&.white-bgc {
+		&:hover, &:focus {
+			background-color: tint($gray, 80%);
+		}
+		&:active {
+			background-color: tint($gray, 60%);
+		}
+		&[disabled] {
+			&:hover, &:focus {
+				background-color: tint($gray, 60%);
+				color: tint($gray, 20%);
+			}
+		}
+	}
+
+	&.black-bgc {
+		&:hover, &:focus {
+			background-color: tint($black, 20%);
+		}
+		&:active {
+			background-color: tint($black, 40%);
+		}
+		&[disabled] {
+			&:hover, &:focus {
+				background-color: tint($gray, 60%);
+				color: tint($gray, 20%);
+			}
+		}
+	}
+}

@@ -1,0 +1,194 @@
+//------------------------------------
+//              #COLORS
+//------------------------------------
+
+
+//Variables
+$lightblue: #00BCF2;
+$blue: #0078D7;
+$midblue: #00188F;
+$darkblue: #002050;
+$lightpurple: #B4A0FF;
+$purple: #5C2D91;
+$darkpurple: #32145A;
+$lightmagenta: #E3008C;
+$magenta: #B4009E;
+$darkmagenta: #5C005C;
+$red: #E81123;
+$darkred: #A80000;
+$lightorange: #FF8C00;
+$orange: #D83B01;
+$lightyellow: #FFF100;
+$yellow: #FFB900;
+$lightgreen: #BAD80A;
+$green: #107C10;
+$darkgreen: #004B1C;
+$lightteal: #00B294;
+$teal: #008272;
+$darkteal: #004B50;
+$gray: #767676;
+$white: #FFFFFF;
+$black: #000000;
+$text-color: #2F2F2F;
+
+$color-list: ("lightblue", $lightblue), ("blue", $blue), ("midblue", $midblue), ("darkblue", $darkblue),
+("lightpurple", $lightpurple), ("purple", $purple), ("darkpurple", $darkpurple), ("lightmagenta", $lightmagenta),
+("magenta", $magenta), ("darkmagenta", $darkmagenta), ("red", $red),
+("darkred", $darkred), ("lightorange", $lightorange), ("orange", $orange),
+("lightyellow", $lightyellow), ("yellow", $yellow), ("lightgreen", $lightgreen),
+("green", $green), ("darkgreen", $darkgreen), ("lightteal", $lightteal), ("teal", $teal),
+("darkteal", $darkteal), ("gray", $gray);
+$shade-list: (20%, 40%, 60%, 80%);
+
+
+//Functions
+@function tint($color, $percentage) {
+    @return mix(#FFFFFF, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(#000000, $color, $percentage);
+}
+
+
+// Brightness math based on:
+//   http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
+ 
+$red-magic-number: 241;
+$green-magic-number: 691;
+$blue-magic-number: 68;
+$brightness-divisor: $red-magic-number + $green-magic-number + $blue-magic-number;
+ 
+@function brightness($color) {
+  // Extract color components
+  $red-component: red($color);
+  $green-component: green($color);
+  $blue-component: blue($color);
+ 
+  // Calculate a brightness value in 3d color space between 0 and 255
+  $number: sqrt((($red-component * $red-component * $red-magic-number) + ($green-component * $green-component * $green-magic-number) + ($blue-component * $blue-component * $blue-magic-number)) / $brightness-divisor);
+ 
+  // Convert to percentage and return
+  @return 100% * $number / 255;
+}
+
+@function contrasting-color($color) {
+  @if brightness($color) < 55% {
+    @return $white;
+  } @else {
+    @return $text-color;
+  }
+}
+
+
+//Mixins
+@mixin primary-color-ladder($color) {
+    .primary-bgc {
+        background-color: $color;
+        color: contrasting-color($color);
+    }
+
+    .primary-c {
+        color: $color;
+    }
+
+    @for $i from 1 through length($shade-list)+1 {
+        .primary-d#{$i}-bgc {
+            background-color: shade($color, nth($shade-list, $i));
+            color: contrasting-color(shade($color, nth($shade-list, $i)));
+        }
+        .primary-l#{$i}-bgc {
+            background-color: tint($color, nth($shade-list, $i));
+            color: contrasting-color(tint($color, nth($shade-list, $i)));
+        }
+
+        .primary-d#{$i}-c {
+            color: shade($color, nth($shade-list, $i));
+        }
+        .primary-l#{$i}-c {
+            color: tint($color, nth($shade-list, $i));
+        }
+    }
+}
+
+@mixin secondary-color-ladder($color) {
+    .secondary-bgc {
+        background-color: $color;
+        color: contrasting-color($color);
+    }
+
+    .secondary-c {
+        color: $color;
+    }
+
+    @for $i from 1 through length($shade-list)+1 {
+        .secondary-d#{$i}-bgc {
+            background-color: shade($color, nth($shade-list, $i));
+            color: contrasting-color(shade($color, nth($shade-list, $i)));
+        }
+        .secondary-l#{$i}-bgc {
+            background-color: tint($color, nth($shade-list, $i));
+            color: contrasting-color(tint($color, nth($shade-list, $i)));
+        }
+
+        .secondary-d#{$i}-c {
+            color: shade($color, nth($shade-list, $i));
+        }
+        .secondary-l#{$i}-c {
+            color: tint($color, nth($shade-list, $i));
+        }
+    }
+}
+
+
+//Output
+.black-bgc {
+    background-color: $black;
+    color: $white;
+}
+
+.black-c {
+    color: $black;
+}
+
+.white-bgc {
+    background-color: $white;
+    color: $text-color;
+}
+
+.white-c {
+    color: $white;
+}
+
+@each $pair in $color-list {
+    @for $i from 1 through length($shade-list)+1 {
+        @if $i == length($shade-list)+1 {
+            .#{nth($pair, 1)}-bgc {
+                background-color: nth($pair, 2);
+                color: contrasting-color(nth($pair, 2));
+            }
+            .#{nth($pair, 1)}-c {
+                color: nth($pair, 2);
+            }
+        } 
+        @else {
+            .#{nth($pair, 1)}-d#{$i}-bgc {
+                background-color: shade(nth($pair, 2), nth($shade-list, $i));
+                color: contrasting-color(shade(nth($pair, 2), nth($shade-list, $i)));
+            }
+
+            .#{nth($pair, 1)}-l#{$i}-bgc {
+                background-color: tint(nth($pair, 2), nth($shade-list, $i));
+                color: contrasting-color(tint(nth($pair, 2), nth($shade-list, $i)));
+            }
+
+            .#{nth($pair, 1)}-d#{$i}-c {
+                color: shade(nth($pair, 2), nth($shade-list, $i));
+            }
+
+            .#{nth($pair, 1)}-l#{$i}-c {
+                color: tint(nth($pair, 2), nth($shade-list, $i));
+            }
+        }
+    }
+}

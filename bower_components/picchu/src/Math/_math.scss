@@ -1,0 +1,83 @@
+//https://github.com/css-recipes/math
+
+$approximationLimit: 10;
+$approximationDecimalRound: 5;
+
+@function power($x, $exponent) {
+  // reset value
+  $value: 1;
+  // positive intergers get multiplied
+  @if $exponent >= 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $x;
+    }
+  }
+  // negitive intergers get divided. A number divided by itself is 1
+  @else {
+    @for $i from $exponent to 0 {
+      $value: $value / $x;
+    }
+  }
+
+  // return the last value written
+  @return $value;
+}
+@function pow($b, $e) { @return power($b, $e); }
+
+@function factorial($x){
+  $ret: 1;
+  @if $x > 0 {
+    @while $x > 0 {
+      $ret: $ret * $x;
+      $x: $x - 1;
+    }
+  }
+
+  @return $ret;
+}
+@function fact($x) { @return factorial($x); }
+
+@function exp($x) {
+  $ret: 0;
+
+  @for $n from 0 to $approximationLimit {
+    $ret: $ret + pow($x, $n) / fact($n);
+  }
+
+  @return decimalRound($ret);
+}
+
+@function ln($x, $dx: true) {
+  $ln: 0;
+  $n: 1;
+  @if ($dx == true or $dx == auto) {
+    $dx: .0001;
+    // to avoid slow compilation
+    $c: 10;
+    @while $x/$c > 1 {
+      $c: $c * 10;
+    }
+    $dx: $dx * $c;
+  }
+  @while $n <= $x {
+    $ln: $ln + $dx / $n;
+    $n: $n + $dx;
+  }
+  @return decimalRound($ln);
+}
+
+@function sqrt($x) {
+  $x: abs($x);
+  $guess: 4;
+  $root: $guess;
+  @for $i from 1 through $approximationLimit {
+    $root: $root - (pow($root, 2) - $x) / (2 * $root);
+  }
+  @return decimalRound($root);
+}
+
+@function decimalRound($x, $decimal: $approximationDecimalRound) {
+  $r: power(10, $decimal);
+
+  @return round($x * $r) / $r;
+}

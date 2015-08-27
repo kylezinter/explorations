@@ -1,0 +1,44 @@
+{
+  "name": "picchu",
+  "homepage": "https://github.com/MicrosoftDotCom/picchu",
+  "authors": [
+    "Microsoft.com kyle.zinter@microsoft.com"
+  ],
+  "description": "An HTML, CSS, and JavaScript framework for developing stunning experiences on the web.",
+  "main": "src/picchu.scss",
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "ui",
+    "framework",
+    "framework",
+    "frontend",
+    "framework",
+    "microsoft",
+    "picchu",
+    "mscom",
+    "microsoft.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "_release": "fb28a74a1e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fb28a74a1e31beaf211dd5205fc2f47f92a5f2ed"
+  },
+  "_source": "git://github.com/MicrosoftDotCom/picchu.git",
+  "_target": "*",
+  "_originalSource": "picchu",
+  "_direct": true
+}

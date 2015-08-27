@@ -1,0 +1,2462 @@
+/*! picchu.css v0.1 | Microsoftdotcom team | Github - url coming once ready to make public */
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, a:hover {
+  outline: 0; }
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+p, pre {
+  margin: 1em 0; }
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none; }
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl, menu, ol, ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu, ol, ul {
+  padding: 0 0 0 40px; }
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button, input, select, textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button, input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.black-bgc {
+  background-color: #000000;
+  color: #FFFFFF; }
+
+.black-c {
+  color: #000000; }
+
+.white-bgc {
+  background-color: #FFFFFF;
+  color: #2F2F2F; }
+
+.white-c {
+  color: #FFFFFF; }
+
+.lightblue-d1-bgc {
+  background-color: #0096c1;
+  color: #FFFFFF; }
+
+.lightblue-l1-bgc {
+  background-color: #33c9f4;
+  color: #2F2F2F; }
+
+.lightblue-d1-c {
+  color: #0096c1; }
+
+.lightblue-l1-c {
+  color: #33c9f4; }
+
+.lightblue-d2-bgc {
+  background-color: #007091;
+  color: #FFFFFF; }
+
+.lightblue-l2-bgc {
+  background-color: #66d6f7;
+  color: #2F2F2F; }
+
+.lightblue-d2-c {
+  color: #007091; }
+
+.lightblue-l2-c {
+  color: #66d6f7; }
+
+.lightblue-d3-bgc {
+  background-color: #004b60;
+  color: #FFFFFF; }
+
+.lightblue-l3-bgc {
+  background-color: #99e4f9;
+  color: #2F2F2F; }
+
+.lightblue-d3-c {
+  color: #004b60; }
+
+.lightblue-l3-c {
+  color: #99e4f9; }
+
+.lightblue-d4-bgc {
+  background-color: #002530;
+  color: #FFFFFF; }
+
+.lightblue-l4-bgc {
+  background-color: #ccf1fc;
+  color: #2F2F2F; }
+
+.lightblue-d4-c {
+  color: #002530; }
+
+.lightblue-l4-c {
+  color: #ccf1fc; }
+
+.lightblue-bgc {
+  background-color: #00BCF2;
+  color: #2F2F2F; }
+
+.lightblue-c {
+  color: #00BCF2; }
+
+.blue-d1-bgc {
+  background-color: #0060ac;
+  color: #FFFFFF; }
+
+.blue-l1-bgc {
+  background-color: #3393df;
+  color: #FFFFFF; }
+
+.blue-d1-c {
+  color: #0060ac; }
+
+.blue-l1-c {
+  color: #3393df; }
+
+.blue-d2-bgc {
+  background-color: #004881;
+  color: #FFFFFF; }
+
+.blue-l2-bgc {
+  background-color: #66aee7;
+  color: #2F2F2F; }
+
+.blue-d2-c {
+  color: #004881; }
+
+.blue-l2-c {
+  color: #66aee7; }
+
+.blue-d3-bgc {
+  background-color: #003056;
+  color: #FFFFFF; }
+
+.blue-l3-bgc {
+  background-color: #99c9ef;
+  color: #2F2F2F; }
+
+.blue-d3-c {
+  color: #003056; }
+
+.blue-l3-c {
+  color: #99c9ef; }
+
+.blue-d4-bgc {
+  background-color: #00172a;
+  color: #FFFFFF; }
+
+.blue-l4-bgc {
+  background-color: #cce4f7;
+  color: #2F2F2F; }
+
+.blue-d4-c {
+  color: #00172a; }
+
+.blue-l4-c {
+  color: #cce4f7; }
+
+.blue-bgc {
+  background-color: #0078D7;
+  color: #FFFFFF; }
+
+.blue-c {
+  color: #0078D7; }
+
+.midblue-d1-bgc {
+  background-color: #001372;
+  color: #FFFFFF; }
+
+.midblue-l1-bgc {
+  background-color: #3346a5;
+  color: #FFFFFF; }
+
+.midblue-d1-c {
+  color: #001372; }
+
+.midblue-l1-c {
+  color: #3346a5; }
+
+.midblue-d2-bgc {
+  background-color: #000e55;
+  color: #FFFFFF; }
+
+.midblue-l2-bgc {
+  background-color: #6674bb;
+  color: #FFFFFF; }
+
+.midblue-d2-c {
+  color: #000e55; }
+
+.midblue-l2-c {
+  color: #6674bb; }
+
+.midblue-d3-bgc {
+  background-color: #000939;
+  color: #FFFFFF; }
+
+.midblue-l3-bgc {
+  background-color: #99a2d2;
+  color: #2F2F2F; }
+
+.midblue-d3-c {
+  color: #000939; }
+
+.midblue-l3-c {
+  color: #99a2d2; }
+
+.midblue-d4-bgc {
+  background-color: #00041c;
+  color: #FFFFFF; }
+
+.midblue-l4-bgc {
+  background-color: #ccd0e8;
+  color: #2F2F2F; }
+
+.midblue-d4-c {
+  color: #00041c; }
+
+.midblue-l4-c {
+  color: #ccd0e8; }
+
+.midblue-bgc {
+  background-color: #00188F;
+  color: #FFFFFF; }
+
+.midblue-c {
+  color: #00188F; }
+
+.darkblue-d1-bgc {
+  background-color: #001940;
+  color: #FFFFFF; }
+
+.darkblue-l1-bgc {
+  background-color: #334c73;
+  color: #FFFFFF; }
+
+.darkblue-d1-c {
+  color: #001940; }
+
+.darkblue-l1-c {
+  color: #334c73; }
+
+.darkblue-d2-bgc {
+  background-color: #001330;
+  color: #FFFFFF; }
+
+.darkblue-l2-bgc {
+  background-color: #667996;
+  color: #FFFFFF; }
+
+.darkblue-d2-c {
+  color: #001330; }
+
+.darkblue-l2-c {
+  color: #667996; }
+
+.darkblue-d3-bgc {
+  background-color: #000c20;
+  color: #FFFFFF; }
+
+.darkblue-l3-bgc {
+  background-color: #99a5b9;
+  color: #2F2F2F; }
+
+.darkblue-d3-c {
+  color: #000c20; }
+
+.darkblue-l3-c {
+  color: #99a5b9; }
+
+.darkblue-d4-bgc {
+  background-color: #00060f;
+  color: #FFFFFF; }
+
+.darkblue-l4-bgc {
+  background-color: #ccd2dc;
+  color: #2F2F2F; }
+
+.darkblue-d4-c {
+  color: #00060f; }
+
+.darkblue-l4-c {
+  color: #ccd2dc; }
+
+.darkblue-bgc {
+  background-color: #002050;
+  color: #FFFFFF; }
+
+.darkblue-c {
+  color: #002050; }
+
+.lightpurple-d1-bgc {
+  background-color: #9080cc;
+  color: #FFFFFF; }
+
+.lightpurple-l1-bgc {
+  background-color: #c3b3ff;
+  color: #2F2F2F; }
+
+.lightpurple-d1-c {
+  color: #9080cc; }
+
+.lightpurple-l1-c {
+  color: #c3b3ff; }
+
+.lightpurple-d2-bgc {
+  background-color: #6c6099;
+  color: #FFFFFF; }
+
+.lightpurple-l2-bgc {
+  background-color: #d2c6ff;
+  color: #2F2F2F; }
+
+.lightpurple-d2-c {
+  color: #6c6099; }
+
+.lightpurple-l2-c {
+  color: #d2c6ff; }
+
+.lightpurple-d3-bgc {
+  background-color: #484066;
+  color: #FFFFFF; }
+
+.lightpurple-l3-bgc {
+  background-color: #e1d9ff;
+  color: #2F2F2F; }
+
+.lightpurple-d3-c {
+  color: #484066; }
+
+.lightpurple-l3-c {
+  color: #e1d9ff; }
+
+.lightpurple-d4-bgc {
+  background-color: #231f32;
+  color: #FFFFFF; }
+
+.lightpurple-l4-bgc {
+  background-color: #f0ecff;
+  color: #2F2F2F; }
+
+.lightpurple-d4-c {
+  color: #231f32; }
+
+.lightpurple-l4-c {
+  color: #f0ecff; }
+
+.lightpurple-bgc {
+  background-color: #B4A0FF;
+  color: #2F2F2F; }
+
+.lightpurple-c {
+  color: #B4A0FF; }
+
+.purple-d1-bgc {
+  background-color: #492474;
+  color: #FFFFFF; }
+
+.purple-l1-bgc {
+  background-color: #7c57a7;
+  color: #FFFFFF; }
+
+.purple-d1-c {
+  color: #492474; }
+
+.purple-l1-c {
+  color: #7c57a7; }
+
+.purple-d2-bgc {
+  background-color: #371b57;
+  color: #FFFFFF; }
+
+.purple-l2-bgc {
+  background-color: #9d81bd;
+  color: #2F2F2F; }
+
+.purple-d2-c {
+  color: #371b57; }
+
+.purple-l2-c {
+  color: #9d81bd; }
+
+.purple-d3-bgc {
+  background-color: #24123a;
+  color: #FFFFFF; }
+
+.purple-l3-bgc {
+  background-color: #bdabd3;
+  color: #2F2F2F; }
+
+.purple-d3-c {
+  color: #24123a; }
+
+.purple-l3-c {
+  color: #bdabd3; }
+
+.purple-d4-bgc {
+  background-color: #12081c;
+  color: #FFFFFF; }
+
+.purple-l4-bgc {
+  background-color: #ded5e9;
+  color: #2F2F2F; }
+
+.purple-d4-c {
+  color: #12081c; }
+
+.purple-l4-c {
+  color: #ded5e9; }
+
+.purple-bgc {
+  background-color: #5C2D91;
+  color: #FFFFFF; }
+
+.purple-c {
+  color: #5C2D91; }
+
+.darkpurple-d1-bgc {
+  background-color: #281048;
+  color: #FFFFFF; }
+
+.darkpurple-l1-bgc {
+  background-color: #5b437b;
+  color: #FFFFFF; }
+
+.darkpurple-d1-c {
+  color: #281048; }
+
+.darkpurple-l1-c {
+  color: #5b437b; }
+
+.darkpurple-d2-bgc {
+  background-color: #1e0c36;
+  color: #FFFFFF; }
+
+.darkpurple-l2-bgc {
+  background-color: #84729c;
+  color: #FFFFFF; }
+
+.darkpurple-d2-c {
+  color: #1e0c36; }
+
+.darkpurple-l2-c {
+  color: #84729c; }
+
+.darkpurple-d3-bgc {
+  background-color: #140824;
+  color: #FFFFFF; }
+
+.darkpurple-l3-bgc {
+  background-color: #ada1bd;
+  color: #2F2F2F; }
+
+.darkpurple-d3-c {
+  color: #140824; }
+
+.darkpurple-l3-c {
+  color: #ada1bd; }
+
+.darkpurple-d4-bgc {
+  background-color: #090311;
+  color: #FFFFFF; }
+
+.darkpurple-l4-bgc {
+  background-color: #d6d0de;
+  color: #2F2F2F; }
+
+.darkpurple-d4-c {
+  color: #090311; }
+
+.darkpurple-l4-c {
+  color: #d6d0de; }
+
+.darkpurple-bgc {
+  background-color: #32145A;
+  color: #FFFFFF; }
+
+.darkpurple-c {
+  color: #32145A; }
+
+.lightmagenta-d1-bgc {
+  background-color: #b50070;
+  color: #FFFFFF; }
+
+.lightmagenta-l1-bgc {
+  background-color: #e833a3;
+  color: #FFFFFF; }
+
+.lightmagenta-d1-c {
+  color: #b50070; }
+
+.lightmagenta-l1-c {
+  color: #e833a3; }
+
+.lightmagenta-d2-bgc {
+  background-color: #880054;
+  color: #FFFFFF; }
+
+.lightmagenta-l2-bgc {
+  background-color: #ee66ba;
+  color: #2F2F2F; }
+
+.lightmagenta-d2-c {
+  color: #880054; }
+
+.lightmagenta-l2-c {
+  color: #ee66ba; }
+
+.lightmagenta-d3-bgc {
+  background-color: #5a0038;
+  color: #FFFFFF; }
+
+.lightmagenta-l3-bgc {
+  background-color: #f399d1;
+  color: #2F2F2F; }
+
+.lightmagenta-d3-c {
+  color: #5a0038; }
+
+.lightmagenta-l3-c {
+  color: #f399d1; }
+
+.lightmagenta-d4-bgc {
+  background-color: #2d001b;
+  color: #FFFFFF; }
+
+.lightmagenta-l4-bgc {
+  background-color: #f9cce8;
+  color: #2F2F2F; }
+
+.lightmagenta-d4-c {
+  color: #2d001b; }
+
+.lightmagenta-l4-c {
+  color: #f9cce8; }
+
+.lightmagenta-bgc {
+  background-color: #E3008C;
+  color: #FFFFFF; }
+
+.lightmagenta-c {
+  color: #E3008C; }
+
+.magenta-d1-bgc {
+  background-color: #90007e;
+  color: #FFFFFF; }
+
+.magenta-l1-bgc {
+  background-color: #c333b1;
+  color: #FFFFFF; }
+
+.magenta-d1-c {
+  color: #90007e; }
+
+.magenta-l1-c {
+  color: #c333b1; }
+
+.magenta-d2-bgc {
+  background-color: #6c005e;
+  color: #FFFFFF; }
+
+.magenta-l2-bgc {
+  background-color: #d266c4;
+  color: #2F2F2F; }
+
+.magenta-d2-c {
+  color: #6c005e; }
+
+.magenta-l2-c {
+  color: #d266c4; }
+
+.magenta-d3-bgc {
+  background-color: #48003f;
+  color: #FFFFFF; }
+
+.magenta-l3-bgc {
+  background-color: #e199d8;
+  color: #2F2F2F; }
+
+.magenta-d3-c {
+  color: #48003f; }
+
+.magenta-l3-c {
+  color: #e199d8; }
+
+.magenta-d4-bgc {
+  background-color: #23001f;
+  color: #FFFFFF; }
+
+.magenta-l4-bgc {
+  background-color: #f0cceb;
+  color: #2F2F2F; }
+
+.magenta-d4-c {
+  color: #23001f; }
+
+.magenta-l4-c {
+  color: #f0cceb; }
+
+.magenta-bgc {
+  background-color: #B4009E;
+  color: #FFFFFF; }
+
+.magenta-c {
+  color: #B4009E; }
+
+.darkmagenta-d1-bgc {
+  background-color: #490049;
+  color: #FFFFFF; }
+
+.darkmagenta-l1-bgc {
+  background-color: #7c337c;
+  color: #FFFFFF; }
+
+.darkmagenta-d1-c {
+  color: #490049; }
+
+.darkmagenta-l1-c {
+  color: #7c337c; }
+
+.darkmagenta-d2-bgc {
+  background-color: #370037;
+  color: #FFFFFF; }
+
+.darkmagenta-l2-bgc {
+  background-color: #9d669d;
+  color: #FFFFFF; }
+
+.darkmagenta-d2-c {
+  color: #370037; }
+
+.darkmagenta-l2-c {
+  color: #9d669d; }
+
+.darkmagenta-d3-bgc {
+  background-color: #240024;
+  color: #FFFFFF; }
+
+.darkmagenta-l3-bgc {
+  background-color: #bd99bd;
+  color: #2F2F2F; }
+
+.darkmagenta-d3-c {
+  color: #240024; }
+
+.darkmagenta-l3-c {
+  color: #bd99bd; }
+
+.darkmagenta-d4-bgc {
+  background-color: #120012;
+  color: #FFFFFF; }
+
+.darkmagenta-l4-bgc {
+  background-color: #deccde;
+  color: #2F2F2F; }
+
+.darkmagenta-d4-c {
+  color: #120012; }
+
+.darkmagenta-l4-c {
+  color: #deccde; }
+
+.darkmagenta-bgc {
+  background-color: #5C005C;
+  color: #FFFFFF; }
+
+.darkmagenta-c {
+  color: #5C005C; }
+
+.red-d1-bgc {
+  background-color: #b90d1c;
+  color: #FFFFFF; }
+
+.red-l1-bgc {
+  background-color: #ec404f;
+  color: #FFFFFF; }
+
+.red-d1-c {
+  color: #b90d1c; }
+
+.red-l1-c {
+  color: #ec404f; }
+
+.red-d2-bgc {
+  background-color: #8b0a15;
+  color: #FFFFFF; }
+
+.red-l2-bgc {
+  background-color: #f1707b;
+  color: #2F2F2F; }
+
+.red-d2-c {
+  color: #8b0a15; }
+
+.red-l2-c {
+  color: #f1707b; }
+
+.red-d3-bgc {
+  background-color: #5c060e;
+  color: #FFFFFF; }
+
+.red-l3-bgc {
+  background-color: #f59fa7;
+  color: #2F2F2F; }
+
+.red-d3-c {
+  color: #5c060e; }
+
+.red-l3-c {
+  color: #f59fa7; }
+
+.red-d4-bgc {
+  background-color: #2e0306;
+  color: #FFFFFF; }
+
+.red-l4-bgc {
+  background-color: #facfd3;
+  color: #2F2F2F; }
+
+.red-d4-c {
+  color: #2e0306; }
+
+.red-l4-c {
+  color: #facfd3; }
+
+.red-bgc {
+  background-color: #E81123;
+  color: #FFFFFF; }
+
+.red-c {
+  color: #E81123; }
+
+.darkred-d1-bgc {
+  background-color: #860000;
+  color: #FFFFFF; }
+
+.darkred-l1-bgc {
+  background-color: #b93333;
+  color: #FFFFFF; }
+
+.darkred-d1-c {
+  color: #860000; }
+
+.darkred-l1-c {
+  color: #b93333; }
+
+.darkred-d2-bgc {
+  background-color: #640000;
+  color: #FFFFFF; }
+
+.darkred-l2-bgc {
+  background-color: #ca6666;
+  color: #FFFFFF; }
+
+.darkred-d2-c {
+  color: #640000; }
+
+.darkred-l2-c {
+  color: #ca6666; }
+
+.darkred-d3-bgc {
+  background-color: #430000;
+  color: #FFFFFF; }
+
+.darkred-l3-bgc {
+  background-color: #dc9999;
+  color: #2F2F2F; }
+
+.darkred-d3-c {
+  color: #430000; }
+
+.darkred-l3-c {
+  color: #dc9999; }
+
+.darkred-d4-bgc {
+  background-color: #210000;
+  color: #FFFFFF; }
+
+.darkred-l4-bgc {
+  background-color: #edcccc;
+  color: #2F2F2F; }
+
+.darkred-d4-c {
+  color: #210000; }
+
+.darkred-l4-c {
+  color: #edcccc; }
+
+.darkred-bgc {
+  background-color: #A80000;
+  color: #FFFFFF; }
+
+.darkred-c {
+  color: #A80000; }
+
+.lightorange-d1-bgc {
+  background-color: #cc7000;
+  color: #FFFFFF; }
+
+.lightorange-l1-bgc {
+  background-color: #ffa333;
+  color: #2F2F2F; }
+
+.lightorange-d1-c {
+  color: #cc7000; }
+
+.lightorange-l1-c {
+  color: #ffa333; }
+
+.lightorange-d2-bgc {
+  background-color: #995400;
+  color: #FFFFFF; }
+
+.lightorange-l2-bgc {
+  background-color: #ffba66;
+  color: #2F2F2F; }
+
+.lightorange-d2-c {
+  color: #995400; }
+
+.lightorange-l2-c {
+  color: #ffba66; }
+
+.lightorange-d3-bgc {
+  background-color: #663800;
+  color: #FFFFFF; }
+
+.lightorange-l3-bgc {
+  background-color: #ffd199;
+  color: #2F2F2F; }
+
+.lightorange-d3-c {
+  color: #663800; }
+
+.lightorange-l3-c {
+  color: #ffd199; }
+
+.lightorange-d4-bgc {
+  background-color: #321b00;
+  color: #FFFFFF; }
+
+.lightorange-l4-bgc {
+  background-color: #ffe8cc;
+  color: #2F2F2F; }
+
+.lightorange-d4-c {
+  color: #321b00; }
+
+.lightorange-l4-c {
+  color: #ffe8cc; }
+
+.lightorange-bgc {
+  background-color: #FF8C00;
+  color: #2F2F2F; }
+
+.lightorange-c {
+  color: #FF8C00; }
+
+.orange-d1-bgc {
+  background-color: #ac2f00;
+  color: #FFFFFF; }
+
+.orange-l1-bgc {
+  background-color: #df6233;
+  color: #FFFFFF; }
+
+.orange-d1-c {
+  color: #ac2f00; }
+
+.orange-l1-c {
+  color: #df6233; }
+
+.orange-d2-bgc {
+  background-color: #812300;
+  color: #FFFFFF; }
+
+.orange-l2-bgc {
+  background-color: #e78966;
+  color: #2F2F2F; }
+
+.orange-d2-c {
+  color: #812300; }
+
+.orange-l2-c {
+  color: #e78966; }
+
+.orange-d3-bgc {
+  background-color: #561700;
+  color: #FFFFFF; }
+
+.orange-l3-bgc {
+  background-color: #efb099;
+  color: #2F2F2F; }
+
+.orange-d3-c {
+  color: #561700; }
+
+.orange-l3-c {
+  color: #efb099; }
+
+.orange-d4-bgc {
+  background-color: #2b0b00;
+  color: #FFFFFF; }
+
+.orange-l4-bgc {
+  background-color: #f7d7cc;
+  color: #2F2F2F; }
+
+.orange-d4-c {
+  color: #2b0b00; }
+
+.orange-l4-c {
+  color: #f7d7cc; }
+
+.orange-bgc {
+  background-color: #D83B01;
+  color: #FFFFFF; }
+
+.orange-c {
+  color: #D83B01; }
+
+.lightyellow-d1-bgc {
+  background-color: #ccc000;
+  color: #2F2F2F; }
+
+.lightyellow-l1-bgc {
+  background-color: #fff333;
+  color: #2F2F2F; }
+
+.lightyellow-d1-c {
+  color: #ccc000; }
+
+.lightyellow-l1-c {
+  color: #fff333; }
+
+.lightyellow-d2-bgc {
+  background-color: #999000;
+  color: #2F2F2F; }
+
+.lightyellow-l2-bgc {
+  background-color: #fff666;
+  color: #2F2F2F; }
+
+.lightyellow-d2-c {
+  color: #999000; }
+
+.lightyellow-l2-c {
+  color: #fff666; }
+
+.lightyellow-d3-bgc {
+  background-color: #666000;
+  color: #FFFFFF; }
+
+.lightyellow-l3-bgc {
+  background-color: #fff999;
+  color: #2F2F2F; }
+
+.lightyellow-d3-c {
+  color: #666000; }
+
+.lightyellow-l3-c {
+  color: #fff999; }
+
+.lightyellow-d4-bgc {
+  background-color: #323000;
+  color: #FFFFFF; }
+
+.lightyellow-l4-bgc {
+  background-color: #fffccc;
+  color: #2F2F2F; }
+
+.lightyellow-d4-c {
+  color: #323000; }
+
+.lightyellow-l4-c {
+  color: #fffccc; }
+
+.lightyellow-bgc {
+  background-color: #FFF100;
+  color: #2F2F2F; }
+
+.lightyellow-c {
+  color: #FFF100; }
+
+.yellow-d1-bgc {
+  background-color: #cc9400;
+  color: #2F2F2F; }
+
+.yellow-l1-bgc {
+  background-color: #ffc733;
+  color: #2F2F2F; }
+
+.yellow-d1-c {
+  color: #cc9400; }
+
+.yellow-l1-c {
+  color: #ffc733; }
+
+.yellow-d2-bgc {
+  background-color: #996f00;
+  color: #FFFFFF; }
+
+.yellow-l2-bgc {
+  background-color: #ffd566;
+  color: #2F2F2F; }
+
+.yellow-d2-c {
+  color: #996f00; }
+
+.yellow-l2-c {
+  color: #ffd566; }
+
+.yellow-d3-bgc {
+  background-color: #664a00;
+  color: #FFFFFF; }
+
+.yellow-l3-bgc {
+  background-color: #ffe399;
+  color: #2F2F2F; }
+
+.yellow-d3-c {
+  color: #664a00; }
+
+.yellow-l3-c {
+  color: #ffe399; }
+
+.yellow-d4-bgc {
+  background-color: #322400;
+  color: #FFFFFF; }
+
+.yellow-l4-bgc {
+  background-color: #fff1cc;
+  color: #2F2F2F; }
+
+.yellow-d4-c {
+  color: #322400; }
+
+.yellow-l4-c {
+  color: #fff1cc; }
+
+.yellow-bgc {
+  background-color: #FFB900;
+  color: #2F2F2F; }
+
+.yellow-c {
+  color: #FFB900; }
+
+.lightgreen-d1-bgc {
+  background-color: #94ac08;
+  color: #2F2F2F; }
+
+.lightgreen-l1-bgc {
+  background-color: #c7df3b;
+  color: #2F2F2F; }
+
+.lightgreen-d1-c {
+  color: #94ac08; }
+
+.lightgreen-l1-c {
+  color: #c7df3b; }
+
+.lightgreen-d2-bgc {
+  background-color: #6f8106;
+  color: #FFFFFF; }
+
+.lightgreen-l2-bgc {
+  background-color: #d5e76c;
+  color: #2F2F2F; }
+
+.lightgreen-d2-c {
+  color: #6f8106; }
+
+.lightgreen-l2-c {
+  color: #d5e76c; }
+
+.lightgreen-d3-bgc {
+  background-color: #4a5604;
+  color: #FFFFFF; }
+
+.lightgreen-l3-bgc {
+  background-color: #e3ef9d;
+  color: #2F2F2F; }
+
+.lightgreen-d3-c {
+  color: #4a5604; }
+
+.lightgreen-l3-c {
+  color: #e3ef9d; }
+
+.lightgreen-d4-bgc {
+  background-color: #252b01;
+  color: #FFFFFF; }
+
+.lightgreen-l4-bgc {
+  background-color: #f1f7ce;
+  color: #2F2F2F; }
+
+.lightgreen-d4-c {
+  color: #252b01; }
+
+.lightgreen-l4-c {
+  color: #f1f7ce; }
+
+.lightgreen-bgc {
+  background-color: #BAD80A;
+  color: #2F2F2F; }
+
+.lightgreen-c {
+  color: #BAD80A; }
+
+.green-d1-bgc {
+  background-color: #0c630c;
+  color: #FFFFFF; }
+
+.green-l1-bgc {
+  background-color: #3f963f;
+  color: #FFFFFF; }
+
+.green-d1-c {
+  color: #0c630c; }
+
+.green-l1-c {
+  color: #3f963f; }
+
+.green-d2-bgc {
+  background-color: #094a09;
+  color: #FFFFFF; }
+
+.green-l2-bgc {
+  background-color: #6fb06f;
+  color: #2F2F2F; }
+
+.green-d2-c {
+  color: #094a09; }
+
+.green-l2-c {
+  color: #6fb06f; }
+
+.green-d3-bgc {
+  background-color: #063106;
+  color: #FFFFFF; }
+
+.green-l3-bgc {
+  background-color: #9fca9f;
+  color: #2F2F2F; }
+
+.green-d3-c {
+  color: #063106; }
+
+.green-l3-c {
+  color: #9fca9f; }
+
+.green-d4-bgc {
+  background-color: #031803;
+  color: #FFFFFF; }
+
+.green-l4-bgc {
+  background-color: #cfe4cf;
+  color: #2F2F2F; }
+
+.green-d4-c {
+  color: #031803; }
+
+.green-l4-c {
+  color: #cfe4cf; }
+
+.green-bgc {
+  background-color: #107C10;
+  color: #FFFFFF; }
+
+.green-c {
+  color: #107C10; }
+
+.darkgreen-d1-bgc {
+  background-color: #003c16;
+  color: #FFFFFF; }
+
+.darkgreen-l1-bgc {
+  background-color: #336f49;
+  color: #FFFFFF; }
+
+.darkgreen-d1-c {
+  color: #003c16; }
+
+.darkgreen-l1-c {
+  color: #336f49; }
+
+.darkgreen-d2-bgc {
+  background-color: #002d10;
+  color: #FFFFFF; }
+
+.darkgreen-l2-bgc {
+  background-color: #669376;
+  color: #FFFFFF; }
+
+.darkgreen-d2-c {
+  color: #002d10; }
+
+.darkgreen-l2-c {
+  color: #669376; }
+
+.darkgreen-d3-bgc {
+  background-color: #001e0b;
+  color: #FFFFFF; }
+
+.darkgreen-l3-bgc {
+  background-color: #99b7a4;
+  color: #2F2F2F; }
+
+.darkgreen-d3-c {
+  color: #001e0b; }
+
+.darkgreen-l3-c {
+  color: #99b7a4; }
+
+.darkgreen-d4-bgc {
+  background-color: #000e05;
+  color: #FFFFFF; }
+
+.darkgreen-l4-bgc {
+  background-color: #ccdbd1;
+  color: #2F2F2F; }
+
+.darkgreen-d4-c {
+  color: #000e05; }
+
+.darkgreen-l4-c {
+  color: #ccdbd1; }
+
+.darkgreen-bgc {
+  background-color: #004B1C;
+  color: #FFFFFF; }
+
+.darkgreen-c {
+  color: #004B1C; }
+
+.lightteal-d1-bgc {
+  background-color: #008e76;
+  color: #FFFFFF; }
+
+.lightteal-l1-bgc {
+  background-color: #33c1a9;
+  color: #2F2F2F; }
+
+.lightteal-d1-c {
+  color: #008e76; }
+
+.lightteal-l1-c {
+  color: #33c1a9; }
+
+.lightteal-d2-bgc {
+  background-color: #006a58;
+  color: #FFFFFF; }
+
+.lightteal-l2-bgc {
+  background-color: #66d0be;
+  color: #2F2F2F; }
+
+.lightteal-d2-c {
+  color: #006a58; }
+
+.lightteal-l2-c {
+  color: #66d0be; }
+
+.lightteal-d3-bgc {
+  background-color: #00473b;
+  color: #FFFFFF; }
+
+.lightteal-l3-bgc {
+  background-color: #99e0d4;
+  color: #2F2F2F; }
+
+.lightteal-d3-c {
+  color: #00473b; }
+
+.lightteal-l3-c {
+  color: #99e0d4; }
+
+.lightteal-d4-bgc {
+  background-color: #00231d;
+  color: #FFFFFF; }
+
+.lightteal-l4-bgc {
+  background-color: #ccefe9;
+  color: #2F2F2F; }
+
+.lightteal-d4-c {
+  color: #00231d; }
+
+.lightteal-l4-c {
+  color: #ccefe9; }
+
+.lightteal-bgc {
+  background-color: #00B294;
+  color: #2F2F2F; }
+
+.lightteal-c {
+  color: #00B294; }
+
+.teal-d1-bgc {
+  background-color: #00685b;
+  color: #FFFFFF; }
+
+.teal-l1-bgc {
+  background-color: #339b8e;
+  color: #FFFFFF; }
+
+.teal-d1-c {
+  color: #00685b; }
+
+.teal-l1-c {
+  color: #339b8e; }
+
+.teal-d2-bgc {
+  background-color: #004e44;
+  color: #FFFFFF; }
+
+.teal-l2-bgc {
+  background-color: #66b4aa;
+  color: #2F2F2F; }
+
+.teal-d2-c {
+  color: #004e44; }
+
+.teal-l2-c {
+  color: #66b4aa; }
+
+.teal-d3-bgc {
+  background-color: #00342d;
+  color: #FFFFFF; }
+
+.teal-l3-bgc {
+  background-color: #99cdc6;
+  color: #2F2F2F; }
+
+.teal-d3-c {
+  color: #00342d; }
+
+.teal-l3-c {
+  color: #99cdc6; }
+
+.teal-d4-bgc {
+  background-color: #001916;
+  color: #FFFFFF; }
+
+.teal-l4-bgc {
+  background-color: #cce6e2;
+  color: #2F2F2F; }
+
+.teal-d4-c {
+  color: #001916; }
+
+.teal-l4-c {
+  color: #cce6e2; }
+
+.teal-bgc {
+  background-color: #008272;
+  color: #FFFFFF; }
+
+.teal-c {
+  color: #008272; }
+
+.darkteal-d1-bgc {
+  background-color: #003c40;
+  color: #FFFFFF; }
+
+.darkteal-l1-bgc {
+  background-color: #336f73;
+  color: #FFFFFF; }
+
+.darkteal-d1-c {
+  color: #003c40; }
+
+.darkteal-l1-c {
+  color: #336f73; }
+
+.darkteal-d2-bgc {
+  background-color: #002d30;
+  color: #FFFFFF; }
+
+.darkteal-l2-bgc {
+  background-color: #669396;
+  color: #FFFFFF; }
+
+.darkteal-d2-c {
+  color: #002d30; }
+
+.darkteal-l2-c {
+  color: #669396; }
+
+.darkteal-d3-bgc {
+  background-color: #001e20;
+  color: #FFFFFF; }
+
+.darkteal-l3-bgc {
+  background-color: #99b7b9;
+  color: #2F2F2F; }
+
+.darkteal-d3-c {
+  color: #001e20; }
+
+.darkteal-l3-c {
+  color: #99b7b9; }
+
+.darkteal-d4-bgc {
+  background-color: #000e0f;
+  color: #FFFFFF; }
+
+.darkteal-l4-bgc {
+  background-color: #ccdbdc;
+  color: #2F2F2F; }
+
+.darkteal-d4-c {
+  color: #000e0f; }
+
+.darkteal-l4-c {
+  color: #ccdbdc; }
+
+.darkteal-bgc {
+  background-color: #004B50;
+  color: #FFFFFF; }
+
+.darkteal-c {
+  color: #004B50; }
+
+.gray-d1-bgc {
+  background-color: #5e5e5e;
+  color: #FFFFFF; }
+
+.gray-l1-bgc {
+  background-color: #919191;
+  color: #2F2F2F; }
+
+.gray-d1-c {
+  color: #5e5e5e; }
+
+.gray-l1-c {
+  color: #919191; }
+
+.gray-d2-bgc {
+  background-color: #464646;
+  color: #FFFFFF; }
+
+.gray-l2-bgc {
+  background-color: #acacac;
+  color: #2F2F2F; }
+
+.gray-d2-c {
+  color: #464646; }
+
+.gray-l2-c {
+  color: #acacac; }
+
+.gray-d3-bgc {
+  background-color: #2f2f2f;
+  color: #FFFFFF; }
+
+.gray-l3-bgc {
+  background-color: #c8c8c8;
+  color: #2F2F2F; }
+
+.gray-d3-c {
+  color: #2f2f2f; }
+
+.gray-l3-c {
+  color: #c8c8c8; }
+
+.gray-d4-bgc {
+  background-color: #171717;
+  color: #FFFFFF; }
+
+.gray-l4-bgc {
+  background-color: #e3e3e3;
+  color: #2F2F2F; }
+
+.gray-d4-c {
+  color: #171717; }
+
+.gray-l4-c {
+  color: #e3e3e3; }
+
+.gray-bgc {
+  background-color: #767676;
+  color: #FFFFFF; }
+
+.gray-c {
+  color: #767676; }
+
+@font-face {
+  font-family: 'wf_segoe-ui_light';
+  src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot");
+  src: local("Segoe UI Light"), local("Segoe WP Light"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; }
+
+@font-face {
+  font-family: 'wf_segoe-ui_normal';
+  src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot");
+  src: local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'wf_segoe-ui_semibold';
+  src: url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.eot');
+  src: local("Segoe UI Semibold"), local("Segoe Semibold"), local("Segoe WP Semibold"), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.eot?#iefix') format("embedded-opentype"), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.woff') format("woff"), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'wf_segoe-ui_semilight';
+  src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.eot");
+  src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'wf_segoe-ui_bold';
+  src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.eot");
+  src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/bold/latest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.headline {
+  font-size: 46px; }
+  @media all and (min-width: 540px) {
+    .headline {
+      font-size: calc(36px + 1.86vw); } }
+  @media all and (min-width: 1400px) {
+    .headline {
+      font-size: 62px; } }
+
+.static-typography .headline {
+  font-size: 62px; }
+
+h1, .h1, .header {
+  font-size: 34px; }
+  @media all and (min-width: 540px) {
+    h1, .h1, .header {
+      font-size: calc(26.5px + 1.4vw); } }
+  @media all and (min-width: 1400px) {
+    h1, .h1, .header {
+      font-size: 46px; } }
+
+.static-typography h1, .static-typography .h1, .static-typography .header {
+  font-size: 46px; }
+
+h2, .h2, .subheader {
+  font-size: 26px; }
+  @media all and (min-width: 540px) {
+    h2, .h2, .subheader {
+      font-size: calc(17.6px + 1.18vw); } }
+  @media all and (min-width: 1400px) {
+    h2, .h2, .subheader {
+      font-size: 34px; } }
+
+.static-typography h2, .static-typography .h2, .static-typography .subheader {
+  font-size: 34px; }
+
+h3, .h3, .title {
+  font-size: 20px; }
+  @media all and (min-width: 540px) {
+    h3, .h3, .title {
+      font-size: calc(18.2px + 0.41vw); } }
+  @media all and (min-width: 1400px) {
+    h3, .h3, .title {
+      font-size: 24px; } }
+
+.static-typography h3, .static-typography .h3, .static-typography .title {
+  font-size: 24px; }
+
+h4, .h4, .subtitle {
+  font-size: 18px; }
+  @media all and (min-width: 540px) {
+    h4, .h4, .subtitle {
+      font-size: calc(16.9px + 0.22vw); } }
+  @media all and (min-width: 1400px) {
+    h4, .h4, .subtitle {
+      font-size: 20px; } }
+
+.static-typography h4, .static-typography .h4, .static-typography .subtitle {
+  font-size: 20px; }
+
+body, p, input, div, span, li, select, button, h5, .h5, h6, .h6, .body {
+  font-size: 16px; }
+  @media all and (min-width: 540px) {
+    body, p, input, div, span, li, select, button, h5, .h5, h6, .h6, .body {
+      font-size: calc(14.9px + 0.22vw); } }
+  @media all and (min-width: 1400px) {
+    body, p, input, div, span, li, select, button, h5, .h5, h6, .h6, .body {
+      font-size: 18px; } }
+
+.static-typography body, .static-typography .body, .static-typography p, .static-typography h5, .static-typography .h5, .static-typography h6, .static-typography .h6, .static-typography input, .static-typography div, .static-typography span, .static-typography li, .static-typography select, .static-typography button {
+  font-size: 18px; }
+
+.body-alt {
+  font-size: 14px; }
+  @media all and (min-width: 540px) {
+    .body-alt {
+      font-size: calc(13.5px + 0.11vw); } }
+  @media all and (min-width: 1400px) {
+    .body-alt {
+      font-size: 15px; } }
+
+.static-typography .body-alt {
+  font-size: 15px; }
+
+.caption {
+  font-size: 12px; }
+  @media all and (min-width: 540px) {
+    .caption {
+      font-size: calc(11.5px + 0.11vw); } }
+  @media all and (min-width: 1400px) {
+    .caption {
+      font-size: 13px; } }
+
+.static-typography .caption {
+  font-size: 13px; }
+
+.caption-alt {
+  font-size: 10px; }
+  @media all and (min-width: 540px) {
+    .caption-alt {
+      font-size: calc(9.5px + 0.11vw); } }
+  @media all and (min-width: 1400px) {
+    .caption-alt {
+      font-size: 11px; } }
+
+.static-typography .caption-alt {
+  font-size: 11px; }
+
+.light {
+  font-family: wf_segoe-ui_light, wf_segoe-ui_semilight, wf_segoe-ui_normal, Arial, sans-serif; }
+
+.semilight {
+  font-family: wf_segoe-ui_semilight, wf_segoe-ui_normal, Arial, sans-serif; }
+
+.normal, .regular {
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif; }
+
+.semibold {
+  font-family: wf_segoe-ui_semibold, wf_segoe-ui_normal, Arial, sans-serif; }
+
+b, .bold {
+  font-family: wf_segoe-ui_bold, wf_segoe-ui_semibold, wf_segoe-ui_normal, Arial, sans-serif; }
+
+body {
+  color: #2F2F2F;
+  text-rendering: optimizeLegibility;
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif;
+  line-height: 1.5; }
+
+p, input, div, span, li, select, button {
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif; }
+
+p {
+  margin: 0 0 1em 0;
+  line-height: 1.5; }
+
+a {
+  color: #0060ac;
+  font-size: inherit;
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif;
+  text-decoration: none; }
+  a:hover, a:focus {
+    text-decoration: underline; }
+
+.headline {
+  font-family: wf_segoe-ui_light, wf_segoe-ui_semilight, wf_segoe-ui_normal, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.2;
+  letter-spacing: -0.01em; }
+
+h1, .h1, .header {
+  font-family: wf_segoe-ui_light, wf_segoe-ui_semilight, wf_segoe-ui_normal, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.2;
+  letter-spacing: -0.01em; }
+
+h2, .h2, .subheader {
+  font-family: wf_segoe-ui_light, wf_segoe-ui_semilight, wf_segoe-ui_normal, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h3, .h3, .title {
+  font-family: wf_segoe-ui_semilight, wf_segoe-ui_normal, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.25; }
+
+h4, .h4, .subtitle {
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.25; }
+
+h5, .h5, h6, .h6 {
+  font-family: wf_segoe-ui_semibold, wf_segoe-ui_normal, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.25; }
+
+.body {
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif;
+  line-height: 1.5; }
+
+.body-alt {
+  font-family: wf_segoe-ui_normal, wf_segoe-ui_semilight, wf_segoe-ui_light, Arial, sans-serif;
+  line-height: 1.25; }
+
+.caption {
+  line-height: 1.25; }
+
+.caption-alt {
+  line-height: 1.25; }
+
+button, .button {
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0.5em 1.5em;
+  position: relative;
+  -webkit-transition: all 0.15s;
+          transition: all 0.15s; }
+  button[disabled], .button[disabled] {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.secondary, .button.secondary {
+    background-color: #767676;
+    color: #FFFFFF; }
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+      background-color: #5e5e5e; }
+    button.secondary:active, .button.secondary:active {
+      background-color: #464646; }
+  button.lightblue-bgc:hover, button.lightblue-bgc:focus, .button.lightblue-bgc:hover, .button.lightblue-bgc:focus {
+    background-color: #0096c1; }
+  button.lightblue-bgc:active, .button.lightblue-bgc:active {
+    background-color: #007091; }
+  button.lightblue-bgc[disabled]:hover, button.lightblue-bgc[disabled]:focus, .button.lightblue-bgc[disabled]:hover, .button.lightblue-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.blue-bgc:hover, button.blue-bgc:focus, .button.blue-bgc:hover, .button.blue-bgc:focus {
+    background-color: #0060ac; }
+  button.blue-bgc:active, .button.blue-bgc:active {
+    background-color: #004881; }
+  button.blue-bgc[disabled]:hover, button.blue-bgc[disabled]:focus, .button.blue-bgc[disabled]:hover, .button.blue-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.midblue-bgc:hover, button.midblue-bgc:focus, .button.midblue-bgc:hover, .button.midblue-bgc:focus {
+    background-color: #001372; }
+  button.midblue-bgc:active, .button.midblue-bgc:active {
+    background-color: #000e55; }
+  button.midblue-bgc[disabled]:hover, button.midblue-bgc[disabled]:focus, .button.midblue-bgc[disabled]:hover, .button.midblue-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.darkblue-bgc:hover, button.darkblue-bgc:focus, .button.darkblue-bgc:hover, .button.darkblue-bgc:focus {
+    background-color: #001940; }
+  button.darkblue-bgc:active, .button.darkblue-bgc:active {
+    background-color: #001330; }
+  button.darkblue-bgc[disabled]:hover, button.darkblue-bgc[disabled]:focus, .button.darkblue-bgc[disabled]:hover, .button.darkblue-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.lightpurple-bgc:hover, button.lightpurple-bgc:focus, .button.lightpurple-bgc:hover, .button.lightpurple-bgc:focus {
+    background-color: #9080cc; }
+  button.lightpurple-bgc:active, .button.lightpurple-bgc:active {
+    background-color: #6c6099; }
+  button.lightpurple-bgc[disabled]:hover, button.lightpurple-bgc[disabled]:focus, .button.lightpurple-bgc[disabled]:hover, .button.lightpurple-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.purple-bgc:hover, button.purple-bgc:focus, .button.purple-bgc:hover, .button.purple-bgc:focus {
+    background-color: #492474; }
+  button.purple-bgc:active, .button.purple-bgc:active {
+    background-color: #371b57; }
+  button.purple-bgc[disabled]:hover, button.purple-bgc[disabled]:focus, .button.purple-bgc[disabled]:hover, .button.purple-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.darkpurple-bgc:hover, button.darkpurple-bgc:focus, .button.darkpurple-bgc:hover, .button.darkpurple-bgc:focus {
+    background-color: #281048; }
+  button.darkpurple-bgc:active, .button.darkpurple-bgc:active {
+    background-color: #1e0c36; }
+  button.darkpurple-bgc[disabled]:hover, button.darkpurple-bgc[disabled]:focus, .button.darkpurple-bgc[disabled]:hover, .button.darkpurple-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.lightmagenta-bgc:hover, button.lightmagenta-bgc:focus, .button.lightmagenta-bgc:hover, .button.lightmagenta-bgc:focus {
+    background-color: #b50070; }
+  button.lightmagenta-bgc:active, .button.lightmagenta-bgc:active {
+    background-color: #880054; }
+  button.lightmagenta-bgc[disabled]:hover, button.lightmagenta-bgc[disabled]:focus, .button.lightmagenta-bgc[disabled]:hover, .button.lightmagenta-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.magenta-bgc:hover, button.magenta-bgc:focus, .button.magenta-bgc:hover, .button.magenta-bgc:focus {
+    background-color: #90007e; }
+  button.magenta-bgc:active, .button.magenta-bgc:active {
+    background-color: #6c005e; }
+  button.magenta-bgc[disabled]:hover, button.magenta-bgc[disabled]:focus, .button.magenta-bgc[disabled]:hover, .button.magenta-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.darkmagenta-bgc:hover, button.darkmagenta-bgc:focus, .button.darkmagenta-bgc:hover, .button.darkmagenta-bgc:focus {
+    background-color: #490049; }
+  button.darkmagenta-bgc:active, .button.darkmagenta-bgc:active {
+    background-color: #370037; }
+  button.darkmagenta-bgc[disabled]:hover, button.darkmagenta-bgc[disabled]:focus, .button.darkmagenta-bgc[disabled]:hover, .button.darkmagenta-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.red-bgc:hover, button.red-bgc:focus, .button.red-bgc:hover, .button.red-bgc:focus {
+    background-color: #b90d1c; }
+  button.red-bgc:active, .button.red-bgc:active {
+    background-color: #8b0a15; }
+  button.red-bgc[disabled]:hover, button.red-bgc[disabled]:focus, .button.red-bgc[disabled]:hover, .button.red-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.darkred-bgc:hover, button.darkred-bgc:focus, .button.darkred-bgc:hover, .button.darkred-bgc:focus {
+    background-color: #860000; }
+  button.darkred-bgc:active, .button.darkred-bgc:active {
+    background-color: #640000; }
+  button.darkred-bgc[disabled]:hover, button.darkred-bgc[disabled]:focus, .button.darkred-bgc[disabled]:hover, .button.darkred-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.lightorange-bgc:hover, button.lightorange-bgc:focus, .button.lightorange-bgc:hover, .button.lightorange-bgc:focus {
+    background-color: #cc7000; }
+  button.lightorange-bgc:active, .button.lightorange-bgc:active {
+    background-color: #995400; }
+  button.lightorange-bgc[disabled]:hover, button.lightorange-bgc[disabled]:focus, .button.lightorange-bgc[disabled]:hover, .button.lightorange-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.orange-bgc:hover, button.orange-bgc:focus, .button.orange-bgc:hover, .button.orange-bgc:focus {
+    background-color: #ac2f00; }
+  button.orange-bgc:active, .button.orange-bgc:active {
+    background-color: #812300; }
+  button.orange-bgc[disabled]:hover, button.orange-bgc[disabled]:focus, .button.orange-bgc[disabled]:hover, .button.orange-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.lightyellow-bgc:hover, button.lightyellow-bgc:focus, .button.lightyellow-bgc:hover, .button.lightyellow-bgc:focus {
+    background-color: #ccc000; }
+  button.lightyellow-bgc:active, .button.lightyellow-bgc:active {
+    background-color: #999000; }
+  button.lightyellow-bgc[disabled]:hover, button.lightyellow-bgc[disabled]:focus, .button.lightyellow-bgc[disabled]:hover, .button.lightyellow-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.yellow-bgc:hover, button.yellow-bgc:focus, .button.yellow-bgc:hover, .button.yellow-bgc:focus {
+    background-color: #cc9400; }
+  button.yellow-bgc:active, .button.yellow-bgc:active {
+    background-color: #996f00; }
+  button.yellow-bgc[disabled]:hover, button.yellow-bgc[disabled]:focus, .button.yellow-bgc[disabled]:hover, .button.yellow-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.lightgreen-bgc:hover, button.lightgreen-bgc:focus, .button.lightgreen-bgc:hover, .button.lightgreen-bgc:focus {
+    background-color: #94ac08; }
+  button.lightgreen-bgc:active, .button.lightgreen-bgc:active {
+    background-color: #6f8106; }
+  button.lightgreen-bgc[disabled]:hover, button.lightgreen-bgc[disabled]:focus, .button.lightgreen-bgc[disabled]:hover, .button.lightgreen-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.green-bgc:hover, button.green-bgc:focus, .button.green-bgc:hover, .button.green-bgc:focus {
+    background-color: #0c630c; }
+  button.green-bgc:active, .button.green-bgc:active {
+    background-color: #094a09; }
+  button.green-bgc[disabled]:hover, button.green-bgc[disabled]:focus, .button.green-bgc[disabled]:hover, .button.green-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.darkgreen-bgc:hover, button.darkgreen-bgc:focus, .button.darkgreen-bgc:hover, .button.darkgreen-bgc:focus {
+    background-color: #003c16; }
+  button.darkgreen-bgc:active, .button.darkgreen-bgc:active {
+    background-color: #002d10; }
+  button.darkgreen-bgc[disabled]:hover, button.darkgreen-bgc[disabled]:focus, .button.darkgreen-bgc[disabled]:hover, .button.darkgreen-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.lightteal-bgc:hover, button.lightteal-bgc:focus, .button.lightteal-bgc:hover, .button.lightteal-bgc:focus {
+    background-color: #008e76; }
+  button.lightteal-bgc:active, .button.lightteal-bgc:active {
+    background-color: #006a58; }
+  button.lightteal-bgc[disabled]:hover, button.lightteal-bgc[disabled]:focus, .button.lightteal-bgc[disabled]:hover, .button.lightteal-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.teal-bgc:hover, button.teal-bgc:focus, .button.teal-bgc:hover, .button.teal-bgc:focus {
+    background-color: #00685b; }
+  button.teal-bgc:active, .button.teal-bgc:active {
+    background-color: #004e44; }
+  button.teal-bgc[disabled]:hover, button.teal-bgc[disabled]:focus, .button.teal-bgc[disabled]:hover, .button.teal-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.darkteal-bgc:hover, button.darkteal-bgc:focus, .button.darkteal-bgc:hover, .button.darkteal-bgc:focus {
+    background-color: #003c40; }
+  button.darkteal-bgc:active, .button.darkteal-bgc:active {
+    background-color: #002d30; }
+  button.darkteal-bgc[disabled]:hover, button.darkteal-bgc[disabled]:focus, .button.darkteal-bgc[disabled]:hover, .button.darkteal-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.gray-bgc:hover, button.gray-bgc:focus, .button.gray-bgc:hover, .button.gray-bgc:focus {
+    background-color: #5e5e5e; }
+  button.gray-bgc:active, .button.gray-bgc:active {
+    background-color: #464646; }
+  button.gray-bgc[disabled]:hover, button.gray-bgc[disabled]:focus, .button.gray-bgc[disabled]:hover, .button.gray-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.white-bgc:hover, button.white-bgc:focus, .button.white-bgc:hover, .button.white-bgc:focus {
+    background-color: #e3e3e3; }
+  button.white-bgc:active, .button.white-bgc:active {
+    background-color: #c8c8c8; }
+  button.white-bgc[disabled]:hover, button.white-bgc[disabled]:focus, .button.white-bgc[disabled]:hover, .button.white-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+  button.black-bgc:hover, button.black-bgc:focus, .button.black-bgc:hover, .button.black-bgc:focus {
+    background-color: #333333; }
+  button.black-bgc:active, .button.black-bgc:active {
+    background-color: #666666; }
+  button.black-bgc[disabled]:hover, button.black-bgc[disabled]:focus, .button.black-bgc[disabled]:hover, .button.black-bgc[disabled]:focus {
+    background-color: #c8c8c8;
+    color: #919191; }
+
+input[type=range].ms-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 3px 0; }
+
+input[type=range].ms-slider:focus {
+  outline: none; }
+  input[type=range].ms-slider:focus::-webkit-slider-thumb {
+    background: #000; }
+  input[type=range].ms-slider:focus::-moz-range-thumb {
+    background: #000; }
+  input[type=range].ms-slider:focus::-ms-thumb {
+    background: #000; }
+
+input[type=range].ms-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #0078d7;
+  border-radius: 0px;
+  border: 0px solid #000000; }
+
+input[type=range].ms-slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid transparent;
+  height: 8px;
+  width: 26px;
+  border-radius: 50px;
+  background: #0078d7;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3px; }
+
+input[type=range].ms-slider::-webkit-slider-thumb:hover {
+  background: #000; }
+
+input[type=range].ms-slider::-moz-range-thumb:hover {
+  background: #000; }
+
+input[type=range].ms-slider::-ms-thumb:hover {
+  background: #000; }
+
+input[type=range].ms-slider:focus::-webkit-slider-runnable-track {
+  background: #0b93ff; }
+
+input[type=range].ms-slider::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #0078d7;
+  border-radius: 0px;
+  border: 0px solid #000000; }
+
+input[type=range].ms-slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid transparent;
+  height: 8px;
+  width: 26px;
+  border-radius: 50px;
+  background: #0078d7;
+  cursor: pointer; }
+
+input[type=range].ms-slider::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type=range].ms-slider::-ms-fill-lower {
+  background: #005ca4;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
+input[type=range].ms-slider::-ms-fill-upper {
+  background: #0078d7;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
+input[type=range].ms-slider::-ms-thumb {
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid transparent;
+  height: 8px;
+  width: 26px;
+  border-radius: 50px;
+  background: #0078d7;
+  cursor: pointer;
+  height: 2px; }
+
+input[type=range].ms-slider:focus::-ms-fill-lower {
+  background: #0078d7; }
+
+input[type=range].ms-slider:focus::-ms-fill-upper {
+  background: #0b93ff; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+.text-center, .tac {
+  text-align: center; }
+
+.text-left, .tal {
+  text-align: left; }
+
+.text-right, .tar {
+  text-align: right; }
+
+.vertical-align-top, .vat {
+  vertical-align: top; }
+
+.vertical-align-middle, .vam {
+  vertical-align: middle; }
+
+.vertical-align-bottom, .vab {
+  vertical-align: bottom; }
+
+.justify {
+  text-align: justify; }
+
+.caps {
+  text-transform: uppercase; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-margin-top {
+  margin-top: 0 !important; }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.no-margin-left {
+  margin-left: 0 !important; }
+
+.no-margin-right {
+  margin-right: 0 !important; }
+
+.no-margin-horizontal {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.no-margin-vertical {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-padding-top {
+  padding-top: 0 !important; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
+.no-padding-left {
+  padding-left: 0 !important; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
+.no-padding-horizontal {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+.no-padding-vertical {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+.overflow-hidden, .ofh {
+  overflow: hidden; }
+
+.float-right, .fr {
+  float: right; }
+
+.float-left, .fl {
+  float: left; }
+
+.float-none, .fn {
+  float: none; }
+
+.no-max-width {
+  max-width: none !important; }
+
+.full-width {
+  width: 100%; }
+
+html {
+  box-sizing: border-box;
+  line-height: 1.4; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+img {
+  max-width: 100%; }

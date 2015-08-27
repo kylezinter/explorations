@@ -1,0 +1,200 @@
+//------------------------------------
+//          #IMPORTS
+//------------------------------------
+@import "config";
+@import "directional";
+//manual col spans, offset, and column ordering imports are at the
+//bottom for specificity battle
+
+
+
+
+
+//Not assuming use of picchu or other library for box-sizing border-box
+.#{$grid-prefix}grid, .#{$grid-prefix}row, [class*="col-"] { 
+    box-sizing: border-box; 
+} 
+
+
+
+
+
+//------------------------------------
+//          #GRID, ROW, COL
+//------------------------------------
+.#{$grid-prefix}grid {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-grid-width;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    //Import of grid helpers like fixed col and zero margin col options
+    @import "grid-helpers";
+
+    //Import of row helpers like fixed col and zero margin col options to be put on an individual row
+    @import "row-helpers";
+}
+
+
+// Column classes
+[class*="col-"] {
+    float: $left;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    &.centered {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//Include for mixed LTR/RTL support
+@include if-mixed("[class*='col-']", (float, $left));
+
+
+
+
+
+//----------------------------------------------------
+//          #PAGE MARGINS MEDIA QUERIES
+//----------------------------------------------------
+@media screen and (min-width: $vp2) {
+    .#{$grid-prefix}grid {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media screen and (min-width: $vp3) {
+    .#{$grid-prefix}grid {
+        padding-left: 0;
+        padding-right: 0;
+        width: 90%; //To provide 5% page margins
+    }
+}
+
+// Reducing padding to a reasonable size for "extremely" large displays
+@media screen and (min-width: 2000px) {
+    .#{$grid-prefix}grid {       
+        .#{$grid-prefix}row {
+            margin-left: -1em;
+            margin-right: -1em;
+            margin-left: -0.5vw;
+            margin-right: -0.5vw;
+
+            & > [class*="col-"] {
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-left: 0.5vw;
+                padding-right: 0.5vw;
+            }
+        }
+    }
+}
+
+
+
+
+
+//------------------------------------
+//          #VERTICAL SPACING OFFER
+//------------------------------------
+.mscom-vertical {
+    [class*="col-"] {
+        padding: 1em 1em;
+        padding: -webkit-calc(1em + 0.5vh) 1vw;
+        padding: calc(1em + 0.5vh) 1vw;
+    }
+}
+
+
+
+
+
+//------------------------------------
+//          #MOBILE FIRST SIZES
+//------------------------------------
+.col-1-3.nb, .col-2-6.nb {
+    width: percentage(1 / 3);
+}
+
+.col-2-3.nb, .col-4-6.nb {
+    width: percentage(2 / 3);
+}
+
+.col-1-2.nb,
+.col-2-4.nb,
+.col-3-6.nb,
+.col-1-8,
+.col-1-12 {
+    width: percentage(1 / 2);
+}
+
+.col-1-4.nb {
+    width: percentage(1 / 4);
+}
+
+.col-3-4.nb {
+    width: percentage(3 / 4);
+}
+
+.col-1-5.nb {
+    width: percentage(1 / 5);
+}
+
+.col-1-6.nb,
+.col-1-24 {
+    width: percentage(1 / 6);
+}
+
+.col-1-8.nb {
+    width: percentage(1 / 8);
+}
+
+.col-1-12.nb {
+    width: percentage(1 / 12);
+}
+
+.col-1-24.nb {
+    width: percentage(1 / 24);
+}
+
+.col-2-8,
+.col-2-12,
+.col-4-12,
+.col-2-2,
+.col-3-3,
+.col-4-4,
+.col-5-5,
+.col-6-6,
+.col-8-8,
+.col-12-12,
+.col-24-24 {
+    width: percentage(1);
+}
+
+
+
+
+
+//----------------------------------------------------
+//          #MEDIA QUERIES FOR AUTOMATIC RWD OPTION
+//----------------------------------------------------
+@import "automaticRWD";
+
+
+
+
+
+@import "manual-colspans";
+@import "offsets";
+@import "column-ordering";
+@import "visibility";

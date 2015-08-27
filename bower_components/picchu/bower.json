@@ -1,0 +1,35 @@
+{
+  "name": "picchu",
+  "version": "0.0.1",
+  "homepage": "https://github.com/MicrosoftDotCom/picchu",
+  "authors": [
+    "Microsoft.com kyle.zinter@microsoft.com"
+  ],
+  "description": "An HTML, CSS, and JavaScript framework for developing stunning experiences on the web.",
+  "main": "src/picchu.scss",
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "ui",
+    "framework",
+    "framework",
+    "frontend",
+    "framework",
+    "microsoft",
+    "picchu",
+    "mscom",
+    "microsoft.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
+  ]
+}

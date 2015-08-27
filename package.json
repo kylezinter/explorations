@@ -1,0 +1,19 @@
+{
+  "author": "Kyle Zinter",
+  "name": "explorations",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kylezinter/explorations",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.0.0",
+    "grunt-browser-sync": "^2.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-grunticon": "~1.0.0",
+    "grunt-newer": "^1.1.0",
+    "grunt-sass": "^0.18.1",
+    "imagemin-mozjpeg": "^4.0.0",
+    "load-grunt-tasks": "^3.1.0",
+    "time-grunt": "^1.1.0"
+  }
+}

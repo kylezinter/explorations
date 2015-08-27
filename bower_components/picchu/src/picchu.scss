@@ -1,0 +1,47 @@
+/*! picchu.css v0.1 | Microsoftdotcom team | Github - url coming once ready to make public */
+
+//------------------------------------
+//              #VARIABLES
+//------------------------------------
+
+//Grid breakpoints - aligning to the winjs grid breakpoints, used for responsive aspects of 
+//this framework, can be changed to align to your breakpoints if different
+$vp1: 320px;
+$vp2: 540px;
+$vp3: 768px;
+$vp4: 1084px;
+$vp5: 1400px;
+
+
+
+
+
+//------------------------------------
+//              #IMPORTS
+//------------------------------------
+@import "Reset/normalize";
+@import "Math/math";
+@import "Color/colors";
+@import "Typography/typography";
+@import "FormElements/buttons";
+@import "FormElements/slider";
+@import "Helpers/helpers";
+
+
+
+
+
+//------------------------------------
+//              #GLOBALS
+//------------------------------------
+html {
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
