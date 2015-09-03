@@ -8647,3 +8647,57 @@ img {
     visibility: hidden; }
   .invisible-xl {
     visibility: hidden; } }
+
+.circle {
+  display: inline-block;
+  background-color: purple;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%; }
+  .circle:nth-of-type(even) {
+    -webkit-animation: move 3s alternate linear infinite;
+            animation: move 3s alternate linear infinite; }
+  .circle:nth-of-type(odd) {
+    -webkit-animation: move2 3s alternate linear infinite;
+            animation: move2 3s alternate linear infinite; }
+
+.gooey-container {
+  padding: 5em;
+  -webkit-filter: url('#gooey');
+          filter: url('#gooey'); }
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px); }
+
+  to {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); } }
+
+@keyframes move {
+  from {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px); }
+
+  to {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); } }
+
+@-webkit-keyframes move2 {
+  from {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); }
+
+  to {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px); } }
+
+@keyframes move2 {
+  from {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px); }
+
+  to {
+    -webkit-transform: translateX(150px);
+            transform: translateX(150px); } }

@@ -1,2 +1,42 @@
 @import "bower_components/picchu/src/picchu";
 @import "bower_components/winjs-grid/src/sass/mscom-grid-mixed.scss";
+
+.circle {
+	display: inline-block;
+	background-color: purple;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	
+
+	&:nth-of-type(even) {
+		animation: move 3s alternate linear infinite;
+	}
+	
+	&:nth-of-type(odd) {
+		animation: move2 3s alternate linear infinite;
+	}
+}
+
+.gooey-container {
+	padding: 5em;
+	filter: url('#gooey');
+}
+
+@keyframes move {
+	from {
+		transform: translateX(150px);
+	}
+	to {
+		transform: translateX(-150px);
+	}
+}
+
+@keyframes move2 {
+	from {
+		transform: translateX(-150px);
+	}
+	to {
+		transform: translateX(150px);
+	}
+}
