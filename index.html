@@ -26,24 +26,55 @@
     </section>
     <section class="ms-grid">
         <section class="ms-row">
-            <div class="col-1-1 tac gooey-container">
+            <div class="col-1-1 tac gooey-container cross-page">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
             </div>
         </section>
+        <section class="ms-row">
+            <div class="col-1-1 tac gooey-container">
+                <div class="rect red-bgc"></div>
+                <div class="rect green-bgc"></div>
+                <div class="rect blue-bgc"></div>
+                <div class="rect yellow-bgc"></div>
+            </div>
+        </section>
     </section>
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-        <filter id="gooey">       
-              <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-  <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-      </defs>
-    </svg>
+    <section class="ms-grid full">
+        <section class="ms-row transport">
+            <div class="col-1-1 tac gooey-container">
+                <div class="circle red-bgc"></div>
+                <div class="circle green-bgc"></div>
+                <div class="circle blue-bgc"></div>
+                <div class="floor"></div>
+            </div>
+        </section>
+
+        <section class="ms-row">
+            <div class="col-1-1">
+              <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+              <label class="menu-open-button" for="menu-open">
+                <span class="hamburger hamburger-1"></span>
+                <span class="hamburger hamburger-2"></span>
+                <span class="hamburger hamburger-3"></span>
+            </label>
+        </div>
+    </section>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="gooey">       
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -7" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+      <!-- <feBlend in="SourceGraphic" in2="goo" /> -->
+  </filter>
+</defs>
+</svg>
 
 </body>
 </html>
