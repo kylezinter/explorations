@@ -36,29 +36,51 @@
 	}
 }
 
+.cloud-container {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	z-index: 3;
+	top: -65px;
+	left: 50%;
+	margin-left: -100px;
+}
+
+.cloud {
+	height: 100%;
+	width: 100%;
+
+	path {
+		fill: white;
+		stroke: black;
+		stroke-width: 2;
+		stroke-linejoin: round;
+	}
+}
+
 .transport {
 	min-height: 800px;
 	position: relative;
 
 	.circle {
 		width: 15px;
-		margin-right: 3em;
-		animation: fall 0.6s normal ease-in infinite;
+		margin-left: 1em;
+		animation: fall 0.4s normal ease-in infinite;
 		border-radius: 10px 100px 20px 20px;
 		background-color: $blue;
 
 		&:nth-of-type(2) {
-			animation: fall 0.6s normal 0.2s ease-in infinite;
+			animation: fall 0.3s normal 0.1s ease-in infinite;
 		}
 
 		&:nth-of-type(3) {
-			animation: fall 0.6s normal 0.3s ease-in infinite;
+			animation: fall 0.5s normal 0.2s ease-in infinite;
 		}
 	}
 
 	.floor {
-		width: 100vw;
-		height: 30px;
+		width: 100%;
+		height: 20px;
 		background-color: $blue;
 		position: absolute;
 		bottom: 0;
@@ -74,10 +96,16 @@
 }
 
 .gooey-container {
-	padding: 2em 0;
-	margin: 3em 0;
+	padding: 5em 0;
 	filter: url('#gooey');
 	user-select: none;
+}
+
+.rain-scene {
+	height: 700px;
+	width: 20em;
+	position: relative;
+	overflow: hidden;
 }
 
 .menu-open {
@@ -94,6 +122,7 @@
 	transition-duration:400ms;
 	transform:scale(1.1,1.1) translate3d(0,0,0);
 	cursor:pointer;
+	margin-left: 5em;
 }
 
 .hamburger{
