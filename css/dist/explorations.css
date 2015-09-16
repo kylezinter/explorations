@@ -8712,6 +8712,21 @@ img {
     position: absolute;
     bottom: 0; }
 
+.sr {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #107C10;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite; }
+
+.heli-blade {
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: perspective(400px) rotateX(70deg) rotateZ(0deg);
+          transform: perspective(400px) rotateX(70deg) rotateZ(0deg); }
+
 .rect {
   display: inline-block;
   width: 50px;

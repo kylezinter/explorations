@@ -87,6 +87,19 @@
 	}
 }
 
+.sr {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-color: $green;
+	animation: spin 1s linear infinite;
+}
+
+.heli-blade{
+	transform-origin: 50% 50%;
+	transform: perspective(400px) rotateX(70deg) rotateZ(0deg);
+}
+
 .rect {
 	display: inline-block;
 	width: 50px;
