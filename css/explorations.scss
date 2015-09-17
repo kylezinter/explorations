@@ -97,7 +97,17 @@
 
 .heli-blade{
 	transform-origin: 50% 50%;
-	transform: perspective(400px) rotateX(70deg) rotateZ(0deg);
+	animation: spin 1s linear infinte;
+}
+
+@keyframes spin {
+	from {
+		transform: perspective(400px) rotateX(80deg) rotateZ(0deg);
+	}
+
+	to {
+		transform: perspective(400px) rotateX(80deg) rotateZ(360deg);
+	}
 }
 
 .rect {

@@ -66,12 +66,15 @@ module.exports = function (grunt) {
             },
             html: {
                 files: ['*.html', '**/*.html']
+            },
+            js: {
+                files: ['js/*.js']
             }
         },
 
         browserSync: {
             files: {
-                src : ['css/dist/**', '**/*.html']
+                src : ['css/dist/**', '**/*.html', 'js/*.js']
             }, 
             options: {
               watchTask: true,

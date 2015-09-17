@@ -8724,8 +8724,26 @@ img {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transform: perspective(400px) rotateX(70deg) rotateZ(0deg);
-          transform: perspective(400px) rotateX(70deg) rotateZ(0deg); }
+  -webkit-animation: spin 1s linear infinte;
+          animation: spin 1s linear infinte; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: perspective(400px) rotateX(80deg) rotateZ(0deg);
+            transform: perspective(400px) rotateX(80deg) rotateZ(0deg); }
+
+  to {
+    -webkit-transform: perspective(400px) rotateX(80deg) rotateZ(360deg);
+            transform: perspective(400px) rotateX(80deg) rotateZ(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: perspective(400px) rotateX(80deg) rotateZ(0deg);
+            transform: perspective(400px) rotateX(80deg) rotateZ(0deg); }
+
+  to {
+    -webkit-transform: perspective(400px) rotateX(80deg) rotateZ(360deg);
+            transform: perspective(400px) rotateX(80deg) rotateZ(360deg); } }
 
 .rect {
   display: inline-block;

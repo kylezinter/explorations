@@ -11,6 +11,15 @@
 		blade.style.OTransform = transfromString;
 		blade.style.transform = transfromString;
 		i+=4;
+
+		transform= getComputedStyle(blade).getPropertyValue('transform');
+
+		blade.setAttribute('transform', transform);
+
+		if(i >= 360) {
+			i-=360;
+		}
+
 		requestAnimationFrame(spin);
 	};
 
